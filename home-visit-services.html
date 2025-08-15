@@ -483,78 +483,89 @@
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header class="header">
         <nav class="nav container">
-            <a href="/" class="logo">
-                <img src="src/assets/homelenslogo.png" alt="HomeLens Logo - Professional Property Inspection Services" loading="lazy" width="64" height="64">
+            <a href="./" class="logo">
+                <img src="src/assets/homelenslogo.png" alt="HomeLens Logo" width="64" height="64">
             </a>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="/">Home</a></li>
-                <li><a href="/online-services.html">Online Services</a></li>
-                <li><a href="/home-visit-services.html">Home Visits</a></li>
-                                  <li><a href="/about.html">About Us</a></li>
-                  
-                  <li><a href="/contact.html">Contact</a></li>
+                <li><a href="./">Home</a></li>
+                <li><a href="./online-services.html">Online Services</a></li>
+                <li><a href="./home-visit-services.html">Home Visits</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./contact.html">Contact</a></li>
             </ul>
             <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
         </nav>
     </header>
 
-    <section class="page-header">
-        <div class="container">
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <div class="page-header">
             <h1>Home Visit Services</h1>
-            <p>Professional in-person property inspections across the UK. Our expert inspectors provide comprehensive visual assessments with detailed reports and actionable recommendations.</p>
+            <p>Professional property inspections at your location</p>
         </div>
-    </section>
 
-    <section class="services">
-        <div class="container">
+        <!-- Services Content -->
+        <div class="content-section">
             <h2>Our Home Visit Services</h2>
-            <div class="service-grid">
-                <div class="service-card">
-                    <div class="service-icon">🏠</div>
-                    <h3>HomeCheck</h3>
-                    <p>A professional visual inspection tailored for homeowners, buyers, and landlords to help identify early signs of property wear, water ingress, and general maintenance issues.</p>
-                    <div class="service-price">From £95</div>
-                    <div class="service-features">
-                        <h4>Includes:</h4>
-                        <ul>
-                            <li>Internal & external inspection</li>
-                            <li>Photographic evidence</li>
-                            <li>Water ingress identification</li>
-                            <li>Summary report</li>
-                            <li>Priority action items</li>
-                        </ul>
-                    </div>
-                    <div class="service-booking">
-                        <a href="/book-homecheck.html" class="btn btn-primary">Book HomeCheck</a>
-                    </div>
+            <p>HomeLens provides comprehensive property inspections at your location, giving you the peace of mind you need when making important property decisions.</p>
+            
+            <h3>What's Included in Our Inspections</h3>
+            <ul>
+                <li><strong>Structural Assessment:</strong> Visual examination of walls, floors, ceilings, and foundations</li>
+                <li><strong>Roof Inspection:</strong> Exterior roof condition and accessible roof spaces</li>
+                <li><strong>Electrical Systems:</strong> Visual check of electrical panels, outlets, and fixtures</li>
+                <li><strong>Plumbing Systems:</strong> Inspection of pipes, fixtures, and water systems</li>
+                <li><strong>Heating & Ventilation:</strong> Assessment of heating systems and ventilation</li>
+                <li><strong>Windows & Doors:</strong> Condition and functionality evaluation</li>
+                <li><strong>External Areas:</strong> Gardens, driveways, and external structures</li>
+            </ul>
+            
+            <h3>Service Packages</h3>
+            <div class="service-packages">
+                <div class="package">
+                    <h4>Basic Home Check</h4>
+                    <p class="price">From £95</p>
+                    <p>Essential property assessment for basic property evaluation needs.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">🔍</div>
-                    <h3>HomeCheck PRO</h3>
-                    <p>A professional visual inspection with detailed report and recommendations. Designed to help protect your home and reduce long-term repair costs.</p>
-                    <div class="service-price">From £125</div>
-                    <div class="service-features">
-                        <h4>Everything in HomeCheck PLUS:</h4>
-                        <ul>
-                            <li>Tailored recommendations</li>
-                            <li>Priority actions</li>
-                            <li>Cost estimates</li>
-                            <li>Maintenance schedule</li>
-                            <li>Follow-up support</li>
-                        </ul>
-                    </div>
-                    <div class="service-booking">
-                        <a href="/book-homecheck-pro.html" class="btn btn-secondary">Book HomeCheck PRO</a>
-                    </div>
+                
+                <div class="package">
+                    <h4>Home Check PRO</h4>
+                    <p class="price">From £125</p>
+                    <p>Comprehensive inspection with detailed reporting and recommendations.</p>
+                </div>
+                
+                <div class="package">
+                    <h4>Premium Inspection</h4>
+                    <p class="price">From £175</p>
+                    <p>Full-service inspection with priority scheduling and extended support.</p>
                 </div>
             </div>
             
-
+            <h3>Why Choose Our Home Visit Service?</h3>
+            <ul>
+                <li><strong>ACABE Accredited:</strong> Our inspectors are certified professionals</li>
+                <li><strong>Local Expertise:</strong> Deep knowledge of properties in Wigan and surrounding areas</li>
+                <li><strong>Detailed Reports:</strong> Comprehensive findings with photos and recommendations</li>
+                <li><strong>Fast Turnaround:</strong> Reports delivered within 24-48 hours</li>
+                <li><strong>Professional Equipment:</strong> High-quality inspection tools and cameras</li>
+                <li><strong>Client Attendance:</strong> You're welcome to attend and ask questions</li>
+            </ul>
+            
+            <h3>Booking Your Inspection</h3>
+            <p>To book a home visit inspection, please contact us through our contact form or email us directly. We'll arrange a convenient time for your inspection and provide you with a detailed quote based on your property size and requirements.</p>
+            
+            <div class="cta-section">
+                <a href="./contact.html" class="btn btn-primary">Book Your Inspection</a>
+                <a href="./contact.html" class="btn btn-secondary">Get a Quote</a>
+            </div>
         </div>
-    </section>
+    </main>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -566,10 +577,10 @@
                 
                 <div class="footer-section">
                     <h3>Quick Links</h3>
-                    <a href="/">Home</a>
-                    <a href="/online-services.html">Online Services</a>
-                    <a href="/home-visit-services.html">Home Visits</a>
-                    <a href="/about.html">About Us</a>
+                    <a href="./">Home</a>
+                    <a href="./online-services.html">Online Services</a>
+                    <a href="./home-visit-services.html">Home Visits</a>
+                    <a href="./about.html">About Us</a>
                 </div>
                 
                 <div class="footer-section">
@@ -582,48 +593,25 @@
             <div class="footer-bottom">
                 <p>© 2024 HomeLens Limited. All rights reserved.</p>
                 <div class="social-links">
-                    <a href="#" class="social-link" title="LinkedIn">
-                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="social-link" title="Facebook">
-                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="social-link" title="Instagram">
-                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987 6.62 0 11.987-5.367 11.987-11.987C24.014 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.49-3.323-1.297C4.198 14.895 3.708 13.744 3.708 12.447s.49-2.448 1.418-3.323c.875-.807 2.026-1.297 3.323-1.297s2.448.49 3.323 1.297c.928.875 1.418 2.026 1.418 3.323s-.49 2.448-1.418 3.323c-.875.807-2.026 1.297-3.323 1.297zm7.718-1.297c-.875.807-2.026 1.297-3.323 1.297s-2.448-.49-3.323-1.297c-.928-.875-1.418-2.026-1.418-3.323s.49-2.448 1.418-3.323c.875-.807 2.026-1.297 3.323-1.297s2.448.49 3.323 1.297c.928.875 1.418 2.026 1.418 3.323s-.49 2.448-1.418 3.323z"/>
-                        </svg>
-                    </a>
+                    <a href="#" class="social-link" title="LinkedIn">LinkedIn</a>
+                    <a href="#" class="social-link" title="Facebook">Facebook</a>
+                    <a href="#" class="social-link" title="Instagram">Instagram</a>
                 </div>
                 <p>
-                    <a href="/privacy.html" style="color: #ffffff; text-decoration: none; margin: 0 8px;">Privacy Policy</a> | 
-                    <a href="/terms.html" style="color: #ffffff; text-decoration: none; margin: 0 8px;">Terms of Service</a>
+                    <a href="./privacy.html" style="color: #ffffff; text-decoration: none; margin: 0 8px;">Privacy Policy</a> | 
+                    <a href="./terms.html" style="color: #ffffff; text-decoration: none; margin: 0 8px;">Terms of Service</a> |
+                    <a href="./cookie-policy.html" style="color: #ffffff; text-decoration: none; margin: 0 8px;">Cookie Policy</a>
                 </p>
             </div>
         </div>
     </footer>
 
     <script>
+        // Mobile menu toggle
         function toggleMenu() {
             const menu = document.getElementById("navMenu");
             menu.classList.toggle("active");
         }
-
-        document.addEventListener("click", function(event) {
-            const menu = document.getElementById("navMenu");
-            const toggle = document.querySelector(".mobile-menu-btn");
-            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
-                menu.classList.remove("active");
-            }
-        });
-
-        document.addEventListener('touchstart', function(){}, {passive: true});
-        document.addEventListener('touchmove', function(){}, {passive: true});
-
-        console.log("🔍 HomeLens Home Visit Services page loaded successfully!");
     </script>
 
     <!-- Crisp Chat Widget -->
