@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HomeLens Privacy Policy - Learn how we collect, use, and protect your personal information when using our professional property inspection services across Wigan.">
+    <meta name="keywords" content="HomeLens privacy policy, data protection, property inspection privacy, GDPR compliance, personal information security">
+    <meta name="author" content="HomeLens Limited">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://homelensuk.co.uk/privacy.html">
+    <meta property="og:title" content="Privacy Policy - HomeLens UK">
+    <meta property="og:description" content="Learn how HomeLens protects your personal information when using our professional property inspection services.">
+    <meta property="og:image" content="https://homelensuk.co.uk/src/assets/homelenslogo.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://homelensuk.co.uk/privacy.html">
+    <meta property="twitter:title" content="Privacy Policy - HomeLens UK">
+    <meta property="twitter:description" content="Learn how HomeLens protects your personal information when using our professional property inspection services.">
+    <meta property="twitter:image" content="https://homelensuk.co.uk/src/assets/homelenslogo.png">
+    
+    <title>Privacy Policy - HomeLens UK</title>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX', {
+            page_title: 'HomeLens Privacy Policy',
+            page_location: window.location.href,
+            send_page_view: true
+        });
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+                'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+                sans-serif;
+            line-height: 1.6;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #dbeafe 0%, #ffffff 100%);
+            color: #111827;
+        }
+        
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+        
+        @media (min-width: 640px) {
+            .container {
+                padding: 0 24px;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .container {
+                padding: 0 32px;
+            }
+        }
+        
+        /* Header */
+        .header {
+            background: #2b2f31;
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            position: relative;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            min-width: 0;
+            flex-shrink: 0;
+        }
+
+        .logo img {
+            height: 64px;
+            width: 64px;
+            object-fit: contain;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .logo:hover img {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+
+        @media (min-width: 640px) {
+            .logo img {
+                height: 80px;
+                width: 80px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .logo img {
+                height: 112px;
+                width: 112px;
+            }
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-menu a:hover {
+            color: #fbbf24;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+            position: absolute;
+            right: 16px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 1.25rem;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+
+                          .nav-menu {
+                  display: none;
+                  position: absolute;
+                  top: 100%;
+                  left: 0;
+                  right: 0;
+                  width: 100vw;
+                  margin-left: calc(-50vw + 50%);
+                  background: #2b2f31;
+                  flex-direction: column;
+                  padding: 1rem;
+                  gap: 1rem;
+                  transform: translateY(-10px);
+                  opacity: 0;
+                  transition: transform 0.3s ease, opacity 0.3s ease;
+                  will-change: transform, opacity;
+                  box-sizing: border-box;
+              }
+
+              .nav-menu.active {
+                  display: flex;
+                  transform: translateY(0);
+                  opacity: 1;
+              }
+        }
+
+        .page-header {
+            background: linear-gradient(180deg, #232628 0%, #2b2f31 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            margin: 140px auto 20px auto;
+            max-width: 1280px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        /* Desktop-only spacing for hero sections */
+        @media (min-width: 768px) {
+            .page-header {
+                margin-top: 180px;
+            }
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (min-width: 768px) {
+            .page-header h1 {
+                font-size: 3.5rem;
+            }
+        }
+
+        .content-section {
+            max-width: 1280px;
+            margin: 20px auto;
+            padding: 32px 16px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-section h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #232628;
+        }
+
+        .content-section h3 {
+            font-size: 1.5rem;
+            margin: 30px 0 15px 0;
+            color: #232628;
+        }
+
+        .content-section p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .content-section ul {
+            margin: 20px 0;
+            padding-left: 30px;
+        }
+
+        .content-section li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .footer {
+            background: #1a1d1e;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 40px;
+        }
+
+        .footer p {
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+
+        .footer a {
+            color: #fbbf24;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .btn {
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="./" class="logo">
+                <img src="src/assets/homelenslogo.png" alt="HomeLens Logo - Professional Property Inspection Services" loading="lazy" width="64" height="64">
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                                <li><a href="./">Home</a></li>
+                <li><a href="./online-services.html">Online Services</a></li>
+                <li><a href="./home-visit-services.html">Home Visits</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Privacy Policy</h1>
+            <p>How we collect, use, and protect your personal information when you use our services.</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <h2>Privacy Policy</h2>
+            <p><strong>Last updated:</strong> January 2024</p>
+            
+            <h3>1. Information We Collect</h3>
+            <p>We collect information you provide directly to us, such as when you:</p>
+            <ul>
+                <li>Fill out our contact forms</li>
+                <li>Book our services</li>
+                <li>Sign up for our newsletter</li>
+                <li>Contact us for support</li>
+            </ul>
+            
+            <h3>2. Types of Information</h3>
+            <p>The types of information we may collect include:</p>
+            <ul>
+                <li>Name and contact information (email, phone, address)</li>
+                <li>Property details and inspection requirements</li>
+                <li>Service preferences and booking information</li>
+                <li>Communication history and correspondence</li>
+            </ul>
+            
+            <h3>3. How We Use Your Information</h3>
+            <p>We use the information we collect to:</p>
+            <ul>
+                <li>Provide and improve our services</li>
+                <li>Process bookings and payments</li>
+                <li>Send you important updates about your inspection</li>
+                <li>Respond to your inquiries and provide customer support</li>
+                <li>Send marketing communications (with your consent)</li>
+            </ul>
+            
+            <h3>4. Information Sharing</h3>
+            <p>We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except:</p>
+            <ul>
+                <li>To trusted service providers who assist us in operating our business</li>
+                <li>When required by law or to protect our rights</li>
+                <li>In connection with a business transfer or merger</li>
+            </ul>
+            
+            <h3>5. Data Security</h3>
+            <p>We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.</p>
+            
+            <h3>6. Your Rights</h3>
+            <p>You have the right to:</p>
+            <ul>
+                <li>Access your personal information</li>
+                <li>Correct inaccurate information</li>
+                <li>Request deletion of your information</li>
+                <li>Opt-out of marketing communications</li>
+                <li>Lodge a complaint with supervisory authorities</li>
+            </ul>
+            
+            <h3>7. Contact Us</h3>
+            <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+            <p><strong>Email:</strong> enquiries@homelensuk.com</p>
+            <p><strong>Address:</strong> HomeLens Limited, Wigan, UK</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 HomeLens Limited. All rights reserved.</p>
+            <p>Professional property inspection and advisory services</p>
+            <p>Contact: enquiries@homelensuk.com</p>
+            <p style="margin-top: 20px;">
+                <a href="./privacy.html">Privacy Policy</a>
+                <a href="./terms.html">Terms of Service</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("navMenu");
+            menu.classList.toggle("active");
+        }
+
+        document.addEventListener("click", function(event) {
+            const menu = document.getElementById("navMenu");
+            const toggle = document.querySelector(".mobile-menu-btn");
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove("active");
+            }
+        });
+
+        document.addEventListener('touchstart', function(){}, {passive: true});
+        document.addEventListener('touchmove', function(){}, {passive: true});
+
+        console.log("🔒 HomeLens Privacy Policy page loaded successfully!");
+    </script>
+
+    <!-- Crisp Chat Widget -->
+    <script type="text/javascript">
+        window.$crisp=[];
+                        window.CRISP_WEBSITE_ID="65ab5a63-82fe-495f-8e98-eb5874b01c97";
+        (function(){
+            const d=document;
+            const s=d.createElement("script");
+            s.src="https://client.crisp.chat/l.js";
+            s.async=1;
+            d.getElementsByTagName("head")[0].appendChild(s);
+        })();
+    </script>
+
+    <!-- Crisp Chat Customization -->
+    <style>
+        /* Customize Crisp Chat widget appearance */
+        #crisp-chatbox {
+            /* Ensure chat doesn't fill entire screen */
+            max-width: 400px !important;
+            max-height: 600px !important;
+            right: 20px !important;
+            bottom: 20px !important;
+        }
+
+        /* Customize the chat button */
+        #crisp-chatbox a[data-full-view] {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%) !important;
+            border: 2px solid #475569 !important;
+            border-radius: 50px !important;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+            transition: all 0.3s ease !important;
+        }
+
+        #crisp-chatbox a[data-full-view]:hover {
+            background: linear-gradient(135deg, #334155 0%, #475569 100%) !important;
+            transform: scale(1.05) !important;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3) !important;
+        }
+
+        /* Customize chat window colors */
+        .crisp-client .cc-kv6t .cc-1xry .cc-1xry {
+            background: #1e293b !important;
+            color: #ffffff !important;
+        }
+
+        .crisp-client .cc-kv6t .cc-1xry .cc-1xry .cc-1xry {
+            background: #334155 !important;
+        }
+
+        /* Header styling */
+        .crisp-client .cc-kv6t .cc-1xry .cc-1xry .cc-1xry .cc-1xry {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%) !important;
+            color: #ffffff !important;
+        }
+
+        /* Message bubbles */
+        .crisp-client .cc-kv6t .cc-1xry .cc-1xry .cc-1xry .cc-1xry .cc-1xry {
+            background: #475569 !important;
+            color: #ffffff !important;
+        }
+
+        /* Input field */
+        .crisp-client .cc-kv6t .cc-1xry .cc-1xry .cc-1xry .cc-1xry .cc-1xry input {
+            background: #334155 !important;
+            color: #ffffff !important;
+            border: 1px solid #475569 !important;
+        }
+
+        /* Send button */
+        .crisp-client .cc-kv6t .cc-1xry .cc-1xry .cc-1xry .cc-1xry .cc-1xry button {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%) !important;
+            color: #ffffff !important;
+            border: 1px solid #475569 !important;
+        }
+    </style>
+
+    <script>
+        // Wait for Crisp to load, then apply customizations
+        window.addEventListener('load', function() {
+            // Apply customizations after a short delay to ensure Crisp is loaded
+            setTimeout(function() {
+                // Customize chat button text and appearance
+                if (window.$crisp) {
+                    // Set custom welcome message
+                    $crisp.push(["safe", true]);
+                    
+                    // Customize the chat appearance
+                    $crisp.push(["config", "position:reverse", [true]]);
+                    $crisp.push(["config", "locale:en", ["en"]]);
+                    
+                    // Set custom colors and branding
+                    $crisp.push(["config", "color:theme", ["#1e293b"]]);
+                }
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
