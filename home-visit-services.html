@@ -108,29 +108,52 @@
         }
 
         .logo img {
-            width: 64px;
             height: 64px;
-            margin-right: 0.75rem;
-            border-radius: 8px;
+            width: 64px;
+            object-fit: contain;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            will-change: transform;
+        }
+
+        .logo:hover img {
+            transform: translateZ(0) scale(1.05);
+            opacity: 0.9;
+        }
+
+        @media (min-width: 640px) {
+            .logo img {
+                height: 80px;
+                width: 80px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .logo img {
+                height: 112px;
+                width: 112px;
+            }
         }
 
         .nav-menu {
             display: flex;
             list-style: none;
-            margin: 0;
-            padding: 0;
             gap: 2rem;
+            will-change: transform;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         .nav-menu a {
             color: white;
             text-decoration: none;
+            transition: color 0.3s ease;
             font-weight: 500;
-            transition: color 0.2s ease;
+            will-change: color;
         }
 
         .nav-menu a:hover {
-            color: #60a5fa;
+            color: #fbbf24;
         }
 
         .mobile-menu-btn {
@@ -140,28 +163,47 @@
             color: white;
             font-size: 1.5rem;
             cursor: pointer;
-            padding: 0.5rem;
+            transition: all 0.2s;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+            will-change: background-color, color;
+            position: absolute;
+            right: 16px;
         }
 
+        /* Responsive Design */
         @media (max-width: 768px) {
+            .logo {
+                font-size: 1.25rem;
+            }
+            
             .mobile-menu-btn {
                 display: block;
             }
-            
+
             .nav-menu {
                 display: none;
                 position: absolute;
                 top: 100%;
                 left: 0;
                 right: 0;
+                width: 100vw;
+                margin-left: calc(-50vw + 50%);
                 background: #2b2f31;
                 flex-direction: column;
                 padding: 1rem;
                 gap: 1rem;
+                transform: translateY(-10px);
+                opacity: 0;
+                transition: transform 0.3s ease, opacity 0.3s ease;
+                will-change: transform, opacity;
+                box-sizing: border-box;
             }
-            
+
             .nav-menu.active {
                 display: flex;
+                transform: translateY(0);
+                opacity: 1;
             }
         }
 
@@ -172,238 +214,283 @@
         }
 
         .page-header {
-            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            background: linear-gradient(180deg, #232628 0%, #2b2f31 100%);
             color: white;
             text-align: center;
-            padding: 3rem 0;
-            margin-bottom: 3rem;
-            border-radius: 0 0 20px 20px;
+            padding: 60px 20px;
+            margin: 140px auto 20px auto;
+            max-width: 1280px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        /* Desktop-only spacing for hero sections */
+        @media (min-width: 768px) {
+            .page-header {
+                margin-top: 180px;
+            }
         }
 
         .page-header h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
+            font-size: 1.25rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
         }
 
         .page-header p {
-            font-size: 1.25rem;
+            font-size: 0.8rem;
+            margin-bottom: 30px;
             opacity: 0.9;
-        }
-
-        /* Content Sections */
-        .content-section {
             max-width: 800px;
-            margin: 0 auto 3rem auto;
-            padding: 0 1rem;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .content-section h2 {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #1e293b;
-            margin-bottom: 1.5rem;
-            text-align: center;
+        @media (min-width: 768px) {
+            .page-header h1 {
+                font-size: 1.75rem;
+            }
         }
 
-        .content-section h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #334155;
-            margin: 2rem 0 1rem 0;
-        }
-
-        .content-section p {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
-            color: #475569;
-        }
-
-        .content-section ul {
-            margin: 1.5rem 0;
-            padding-left: 2rem;
-        }
-
-        .content-section li {
-            margin-bottom: 0.75rem;
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: #475569;
-        }
-
-        .content-section li strong {
-            color: #1e293b;
-        }
-
-        /* Service Packages */
-        .service-packages {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-
-        .package {
+        .services {
+            max-width: 1280px;
+            margin: 20px auto;
+            padding: 32px 16px;
             background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .services h2 {
+            text-align: center;
+            font-size: 1.75rem;
+            margin-bottom: 40px;
+            color: #232628;
+        }
+
+        @media (min-width: 768px) {
+            .services h2 {
+                font-size: 2.5rem;
+            }
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        @media (min-width: 768px) {
+            .service-grid {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 800px;
+                margin: 0 auto;
+            }
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, #232628 0%, #2b2f31 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #fbbf24;
+        }
+
+        .service-price {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #fbbf24;
+            margin-top: 15px;
+        }
+
+        .service-description {
+            font-size: 0.9rem;
+            margin-top: 10px;
+            opacity: 0.8;
+        }
+
+        .service-features {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .service-features h4 {
+            color: #fbbf24;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .service-features ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-features li {
+            padding: 5px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .service-features li:before {
+            content: "✓";
+            color: #fbbf24;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .service-booking {
+            margin-top: 25px;
             text-align: center;
         }
 
-        .package h4 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: #1e293b;
-            margin-bottom: 1rem;
+        .service-booking .btn {
+            margin: 0;
+            min-width: 200px;
         }
 
-        .package .price {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #059669;
-            margin-bottom: 1rem;
-        }
-
-        .package p {
-            color: #64748b;
-            font-size: 1rem;
-        }
-
-        /* CTA Section */
         .cta-section {
             text-align: center;
-            margin: 3rem 0;
+            margin: 40px 0;
         }
 
         .btn {
             display: inline-block;
-            padding: 0.875rem 2rem;
-            border-radius: 8px;
+            background: #2563eb;
+            color: white;
+            font-weight: bold;
+            padding: 15px 30px;
+            border-radius: 50px;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: all 0.2s ease;
-            border: none;
-            cursor: pointer;
-            margin: 0 0.5rem;
+            text-align: center;
+            font-size: 1.1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+            margin: 10px;
+        }
+
+        .btn:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(30, 41, 59, 0.3);
+            background: #2563eb;
         }
 
         .btn-secondary {
-            background: white;
-            color: #1e293b;
-            border: 2px solid #1e293b;
+            background: #059669;
         }
 
         .btn-secondary:hover {
-            background: #1e293b;
-            color: white;
-            transform: translateY(-2px);
+            background: #047857;
         }
 
-        /* Footer */
         .footer {
-            background: #1e293b;
+            background: #1a1d1e;
             color: white;
-            padding: 3rem 0 1rem 0;
-            margin-top: 4rem;
+            padding: 40px 20px;
+            margin-top: 40px;
+            text-align: center;
         }
 
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 768px) {
+            .footer-content {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 40px;
+            }
         }
 
         .footer-section h3 {
-            font-size: 1.25rem;
+            color: #ffffff;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
             font-weight: 600;
-            margin-bottom: 1rem;
-            color: #f8fafc;
         }
 
         .footer-section p {
-            margin-bottom: 0.5rem;
-            color: #cbd5e1;
+            margin-bottom: 8px;
+            opacity: 0.9;
+            font-size: 0.9rem;
         }
 
         .footer-section a {
-            color: #cbd5e1;
+            color: #ffffff;
             text-decoration: none;
+            transition: color 0.2s;
             display: block;
-            margin-bottom: 0.5rem;
-            transition: color 0.2s ease;
+            margin-bottom: 6px;
+            font-size: 0.9rem;
         }
 
         .footer-section a:hover {
-            color: #60a5fa;
+            color: #fbbf24;
         }
 
         .footer-bottom {
-            border-top: 1px solid #334155;
-            padding-top: 2rem;
-            text-align: center;
+            border-top: 1px solid #374151;
+            margin-top: 30px;
+            padding-top: 20px;
         }
 
         .footer-bottom p {
-            margin-bottom: 1rem;
-            color: #94a3b8;
+            margin-bottom: 6px;
+            opacity: 0.7;
+            font-size: 0.85rem;
         }
 
         .social-links {
             display: flex;
+            gap: 12px;
             justify-content: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
+            margin: 15px 0;
         }
 
         .social-link {
-            color: #94a3b8;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            background: #374151;
+            color: white;
+            border-radius: 50%;
             text-decoration: none;
-            padding: 0.5rem;
-            transition: color 0.2s ease;
+            transition: all 0.2s;
+            font-size: 1rem;
         }
 
         .social-link:hover {
-            color: #60a5fa;
+            background: #fbbf24;
+            color: #1a1d1e;
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .page-header h1 {
-                font-size: 2rem;
-            }
-            
-            .page-header p {
-                font-size: 1.1rem;
-            }
-            
-            .content-section h2 {
-                font-size: 1.75rem;
-            }
-            
-            .service-packages {
-                grid-template-columns: 1fr;
-            }
-            
-            .btn {
-                display: block;
-                width: 100%;
-                margin: 0.5rem 0;
-            }
+        .btn {
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
         }
     </style>
 </head>
@@ -434,39 +521,69 @@
         </div>
 
         <!-- Services Content -->
-        <div class="content-section">
+        <div class="services">
             <h2>Our Home Visit Services</h2>
             <p>HomeLens provides comprehensive property inspections at your location, giving you the peace of mind you need when making important property decisions.</p>
             
-            <h3>What's Included in Our Inspections</h3>
-            <ul>
-                <li><strong>Structural Assessment:</strong> Visual examination of walls, floors, ceilings, and foundations</li>
-                <li><strong>Roof Inspection:</strong> Exterior roof condition and accessible roof spaces</li>
-                <li><strong>Electrical Systems:</strong> Visual check of electrical panels, outlets, and fixtures</li>
-                <li><strong>Plumbing Systems:</strong> Inspection of pipes, fixtures, and water systems</li>
-                <li><strong>Heating & Ventilation:</strong> Assessment of heating systems and ventilation</li>
-                <li><strong>Windows & Doors:</strong> Condition and functionality evaluation</li>
-                <li><strong>External Areas:</strong> Gardens, driveways, and external structures</li>
-            </ul>
-            
-            <h3>Service Packages</h3>
-            <div class="service-packages">
-                <div class="package">
-                    <h4>Basic Home Check</h4>
-                    <p class="price">From £95</p>
-                    <p>Essential property assessment for basic property evaluation needs.</p>
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="service-icon">⚙️</div>
+                    <h3>Basic Home Check</h3>
+                    <p class="service-price">From £95</p>
+                    <p class="service-description">Essential property assessment for basic property evaluation needs.</p>
+                    <div class="service-features">
+                        <h4>What's Included:</h4>
+                        <ul>
+                            <li>Structural Assessment</li>
+                            <li>Roof Inspection</li>
+                            <li>Electrical Systems</li>
+                            <li>Plumbing Systems</li>
+                            <li>Heating & Ventilation</li>
+                            <li>Windows & Doors</li>
+                            <li>External Areas</li>
+                        </ul>
+                    </div>
+                    <div class="service-booking">
+                        <a href="./contact.html" class="btn btn-primary">Book Now</a>
+                    </div>
                 </div>
                 
-                <div class="package">
-                    <h4>Home Check PRO</h4>
-                    <p class="price">From £125</p>
-                    <p>Comprehensive inspection with detailed reporting and recommendations.</p>
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3>Home Check PRO</h3>
+                    <p class="service-price">From £125</p>
+                    <p class="service-description">Comprehensive inspection with detailed reporting and recommendations.</p>
+                    <div class="service-features">
+                        <h4>What's Included:</h4>
+                        <ul>
+                            <li>All Basic Home Check items</li>
+                            <li>Additional detailed reports</li>
+                            <li>Priority scheduling</li>
+                            <li>Extended support</li>
+                        </ul>
+                    </div>
+                    <div class="service-booking">
+                        <a href="./contact.html" class="btn btn-primary">Book Now</a>
+                    </div>
                 </div>
                 
-                <div class="package">
-                    <h4>Premium Inspection</h4>
-                    <p class="price">From £175</p>
-                    <p>Full-service inspection with priority scheduling and extended support.</p>
+                <div class="service-card">
+                    <div class="service-icon">🏆</div>
+                    <h3>Premium Inspection</h3>
+                    <p class="service-price">From £175</p>
+                    <p class="service-description">Full-service inspection with priority scheduling and extended support.</p>
+                    <div class="service-features">
+                        <h4>What's Included:</h4>
+                        <ul>
+                            <li>All Home Check PRO items</li>
+                            <li>Priority scheduling</li>
+                            <li>Extended support</li>
+                            <li>Priority scheduling</li>
+                        </ul>
+                    </div>
+                    <div class="service-booking">
+                        <a href="./contact.html" class="btn btn-primary">Book Now</a>
+                    </div>
                 </div>
             </div>
             
