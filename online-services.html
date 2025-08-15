@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HomeLens Online Services - Virtual property consultations, document reviews, and expert advice from ACABE-accredited inspectors. Professional property guidance without leaving your home.">
+    <meta name="keywords" content="online property inspection, virtual property consultation, property document review, remote property advice, HomeLens online services, property inspection consultation">
+    <meta name="author" content="HomeLens Limited">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://homelensuk.co.uk/online-services.html">
+    <meta property="og:title" content="Online Services - HomeLens UK">
+    <meta property="og:description" content="HomeLens Online Services - Virtual property consultations, document reviews, and expert advice from ACABE-accredited inspectors.">
+    <meta property="og:image" content="https://homelensuk.co.uk/src/assets/homelenslogo.png">
+    <meta property="og:site_name" content="HomeLens UK">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://homelensuk.co.uk/online-services.html">
+    <meta property="twitter:title" content="Online Services - HomeLens UK">
+    <meta property="twitter:description" content="HomeLens Online Services - Virtual property consultations, document reviews, and expert advice from ACABE-accredited inspectors.">
+    <meta property="twitter:image" content="https://homelensuk.co.uk/src/assets/homelenslogo.png">
+    
+    <title>Online Services - HomeLens UK</title>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX', {
+            page_title: 'HomeLens Online Services',
+            page_location: window.location.href,
+            send_page_view: true
+        });
+    </script>
+    
+    <!-- EmailJS Library -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+                'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+                sans-serif;
+            line-height: 1.6;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #dbeafe 0%, #ffffff 100%);
+            color: #111827;
+        }
+        
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+        
+        @media (min-width: 640px) {
+            .container {
+                padding: 0 24px;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .container {
+                padding: 0 32px;
+            }
+        }
+        
+        /* Header */
+        .header {
+            background: #2b2f31;
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            position: relative;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            min-width: 0;
+            flex-shrink: 0;
+        }
+
+        .logo img {
+            height: 64px;
+            width: 64px;
+            object-fit: contain;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .logo:hover img {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+
+        @media (min-width: 640px) {
+            .logo img {
+                height: 80px;
+                width: 80px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .logo img {
+                height: 112px;
+                width: 112px;
+            }
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-menu a:hover {
+            color: #fbbf24;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            position: absolute;
+            right: 16px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 1.25rem;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+
+                          .nav-menu {
+                  display: none;
+                  position: absolute;
+                  top: 100%;
+                  left: 0;
+                  right: 0;
+                  width: 100vw;
+                  margin-left: calc(-50vw + 50%);
+                  background: #2b2f31;
+                  flex-direction: column;
+                  padding: 1rem;
+                  gap: 1rem;
+                  transform: translateY(-10px);
+                  opacity: 0;
+                  transition: transform 0.3s ease, opacity 0.3s ease;
+                  will-change: transform, opacity;
+                  box-sizing: border-box;
+              }
+
+              .nav-menu.active {
+                  display: flex;
+                  transform: translateY(0);
+                  opacity: 1;
+              }
+        }
+        
+
+        .page-header {
+            background: linear-gradient(180deg, #232628 0%, #2b2f31 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            margin: 140px auto 20px auto;
+            max-width: 1280px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        /* Desktop-only spacing for hero sections */
+        @media (min-width: 768px) {
+            .page-header {
+                margin-top: 180px;
+            }
+        }
+        
+                .page-header h1 {
+            font-size: 1.25rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .page-header p {
+            font-size: 0.8rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        @media (min-width: 768px) {
+            .page-header h1 {
+                font-size: 1.75rem;
+            }
+        }
+        
+        .services {
+            max-width: 1280px;
+            margin: 20px auto;
+            padding: 32px 16px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .services h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: #232628;
+        }
+        
+        @media (min-width: 768px) {
+            .services h2 {
+                font-size: 3rem;
+            }
+        }
+        
+        .service-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        
+        @media (min-width: 768px) {
+            .service-grid {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 800px;
+                margin: 0 auto;
+            }
+        }
+        
+        .service-card {
+            background: linear-gradient(135deg, #232628 0%, #2b2f31 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #fbbf24;
+        }
+        
+        .service-price {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #fbbf24;
+            margin-top: 15px;
+        }
+        
+        .service-description {
+            font-size: 0.9rem;
+            margin-top: 10px;
+            opacity: 0.8;
+        }
+        
+        .cta-section {
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            font-weight: bold;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            text-align: center;
+            font-size: 1.1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+            margin: 10px;
+        }
+        
+        .btn:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+        
+        .btn-primary {
+            background: #2563eb;
+        }
+        
+        .btn-secondary {
+            background: #059669;
+        }
+        
+        .btn-secondary:hover {
+            background: #047857;
+        }
+        
+        .btn:disabled {
+            background: #9ca3af;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .btn-loading {
+            display: none;
+        }
+        
+        .btn:disabled .btn-text {
+            display: none;
+        }
+        
+        .btn:disabled .btn-loading {
+            display: inline;
+        }
+        
+        .footer {
+            background: #1a1d1e;
+            color: white;
+            padding: 40px 20px;
+            margin-top: 40px;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        @media (min-width: 768px) {
+            .footer-content {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 40px;
+            }
+        }
+        
+        .footer-section h3 {
+            color: #ffffff;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .footer-section p {
+            margin-bottom: 8px;
+            opacity: 0.9;
+            font-size: 0.9rem;
+        }
+        
+        .footer-section a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.2s;
+            display: block;
+            margin-bottom: 6px;
+            font-size: 0.9rem;
+        }
+        
+        .footer-section a:hover {
+            color: #fbbf24;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            margin-top: 30px;
+            padding-top: 20px;
+        }
+        
+        .footer-bottom p {
+            margin-bottom: 6px;
+            opacity: 0.7;
+            font-size: 0.85rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin: 15px 0;
+        }
+        
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            background: #374151;
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: all 0.2s;
+            font-size: 1rem;
+        }
+        
+        .social-link:hover {
+            background: #fbbf24;
+            color: #1a1d1e;
+        }
+        
+        .btn,
+        .menu-toggle {
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+        }
+        
+        /* Upload Form Styles */
+        .upload-form-section {
+            max-width: 800px;
+            margin: 48px auto;
+            padding: 32px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border: 2px solid #e5e7eb;
+        }
+        
+        .upload-form-section {
+            background: linear-gradient(135deg, #232628 0%, #2b2f31 100%);
+            border-radius: 20px;
+            padding: 32px;
+            margin: 40px auto;
+            max-width: 800px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border: 2px solid #475569;
+        }
+
+        .upload-form-section h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 16px;
+            color: #ffffff;
+            text-align: center;
+        }
+        
+        .upload-form-section p {
+            text-align: center;
+            margin-bottom: 32px;
+            color: #e5e7eb;
+        }
+        
+        .form-group {
+            margin-bottom: 24px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #f3f4f6;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.2s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        .image-upload-section {
+            margin-bottom: 32px;
+        }
+        
+        .image-upload-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 16px;
+            margin-top: 16px;
+        }
+        
+        .image-upload-item {
+            position: relative;
+            border: 2px dashed #d1d5db;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: #f9fafb;
+        }
+        
+        .image-upload-item:hover {
+            border-color: #2563eb;
+            background: #f0f9ff;
+        }
+        
+        .image-upload-item input[type="file"] {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+        }
+        
+        .upload-placeholder {
+            pointer-events: none;
+        }
+        
+        .upload-placeholder span {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .upload-placeholder p {
+            margin: 0;
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
+        
+        .preview-image {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+        
+        .remove-image {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background: #ef4444;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .remove-image:hover {
+            background: #dc2626;
+        }
+        
+        .upload-note {
+            font-size: 0.875rem;
+            color: #6b7280;
+            text-align: center;
+            margin-top: 16px;
+        }
+        
+        @media (min-width: 640px) {
+            .upload-form-section {
+                padding: 40px;
+            }
+            
+            .image-upload-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        /* Message Styles */
+        .message {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            padding: 20px;
+        }
+        
+        .message-content {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            max-width: 500px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            animation: slideIn 0.3s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .message-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .success-message .message-content {
+            border-top: 5px solid #059669;
+        }
+        
+        .error-message .message-content {
+            border-top: 5px solid #dc2626;
+        }
+        
+        .message h3 {
+            color: #232628;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .message p {
+            color: #4b5563;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+        
+        .message .btn {
+            margin: 0;
+            min-width: 120px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="/" class="logo">
+                <img src="src/assets/homelenslogo.png" alt="HomeLens Logo - Professional Property Inspection Services" loading="lazy" width="64" height="64">
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/online-services.html">Online Services</a></li>
+                <li><a href="/home-visit-services.html">Home Visits</a></li>
+                <li><a href="/about.html">About Us</a></li>
+                
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Online Services & Advice</h1>
+            <p>Get professional property inspection advice from the comfort of your home. Our online services provide expert guidance without the need for a physical visit.</p>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>Virtual Review</h3>
+                    <p>Upload photos and get expert advice within 24-48 hours. Perfect for quick assessments and remote consultations.</p>
+                    <div class="service-price">£45</div>
+                    <p class="service-description">
+                        Expert property advice, no home visit needed. Ideal for quick questions and initial assessments.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>Online Consultation</h3>
+                    <p>Video call with our property experts for real-time advice and guidance on your property concerns.</p>
+                    <div class="service-price">£75</div>
+                    <p class="service-description">
+                        Live video consultation with detailed follow-up report and recommendations.
+                    </p>
+                </div>
+
+            </div>
+            
+            <div class="upload-form-section">
+                <h3>Upload Images for Review</h3>
+                <p>Upload up to 3 images of your property for our experts to review. We'll provide professional advice within 24-48 hours.</p>
+                
+                <form class="upload-form" id="imageUploadForm">
+                    <div class="form-group">
+                        <label for="from_name">Your Name *</label>
+                        <input type="text" id="from_name" name="from_name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="from_email">Email Address *</label>
+                        <input type="email" id="from_email" name="from_email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="description">Property Description</label>
+                        <textarea id="description" name="description" rows="4" placeholder="Describe your property and any specific concerns you'd like us to address..."></textarea>
+                    </div>
+                    
+                    <div class="image-upload-section">
+                        <label style="color: #f3f4f6;">Upload Images (Max 3) *</label>
+                        <div class="image-upload-grid">
+                            <div class="image-upload-item" id="upload1">
+                                <input type="file" id="image1" name="image1" accept="image/*" onchange="previewImage(this, 1)">
+                                <div class="upload-placeholder">
+                                    <span>📷</span>
+                                    <p>Click to upload</p>
+                                </div>
+                                <img class="preview-image" style="display: none;">
+                                <button type="button" class="remove-image" onclick="removeImage(1)" style="display: none;">✕</button>
+                            </div>
+                            <div class="image-upload-item" id="upload2">
+                                <input type="file" id="image2" name="image2" accept="image/*" onchange="previewImage(this, 2)">
+                                <div class="upload-placeholder">
+                                    <span>📷</span>
+                                    <p>Click to upload</p>
+                                </div>
+                                <img class="preview-image" style="display: none;">
+                                <button type="button" class="remove-image" onclick="removeImage(2)" style="display: none;">✕</button>
+                            </div>
+                            <div class="image-upload-item" id="upload3">
+                                <input type="file" id="image3" name="image3" accept="image/*" onchange="previewImage(this, 3)">
+                                <div class="upload-placeholder">
+                                    <span>📷</span>
+                                    <p>Click to upload</p>
+                                </div>
+                                <img class="preview-image" style="display: none;">
+                                <button type="button" class="remove-image" onclick="removeImage(3)" style="display: none;">✕</button>
+                            </div>
+                        </div>
+                                                 <p class="upload-note">* At least one image is required. Supported formats: JPG, PNG, GIF</p>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" id="submitBtn">
+                        <span class="btn-text">Submit for Review</span>
+                        <span class="btn-loading" style="display: none;">Sending...</span>
+                    </button>
+                </form>
+            </div>
+            
+            <div class="cta-section">
+                <h3 style="margin-bottom: 20px; color: #232628;">Ready to Get Started?</h3>
+                <a href="/contact.html" class="btn btn-secondary">Contact Us</a>
+                
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Message -->
+    <div id="successMessage" class="message success-message" style="display: none;">
+        <div class="message-content">
+            <div class="message-icon">✅</div>
+                         <h3>Image Review Request Sent Successfully!</h3>
+             <p>Thank you for submitting your images for review! We've sent your request with the actual images to our team at enquiries@homelensuk.co.uk. We'll get back to you within 24-48 hours with professional advice.</p>
+            <button onclick="hideMessage()" class="btn btn-primary">Close</button>
+        </div>
+    </div>
+    
+    <!-- Error Message -->
+    <div id="errorMessage" class="message error-message" style="display: none;">
+        <div class="message-content">
+            <div class="message-icon">⚠️</div>
+            <h3>Thank You for Your Interest!</h3>
+            <p>Thank you for your image review request! We will contact you within 24-48 hours to provide professional advice on your property.</p>
+            <button onclick="hideMessage()" class="btn btn-primary">Close</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About HomeLens</h3>
+                    <p>Professional property inspection services across Wigan</p>
+                    <p>ACABE member providing expert visual assessments</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="/">Home</a>
+                    <a href="/online-services.html">Online Services</a>
+                    <a href="/home-visit-services.html">Home Visits</a>
+                    <a href="/about.html">About Us</a>
+                    
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>enquiries@homelensuk.co.uk</p>
+                    <p>support@homelensuk.co.uk</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2024 HomeLens Limited. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" title="LinkedIn">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" title="Facebook">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" title="Instagram">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987 6.62 0 11.987-5.367 11.987-11.987C24.014 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.49-3.323-1.297C4.198 14.895 3.708 13.744 3.708 12.447s.49-2.448 1.418-3.323c.875-.807 2.026-1.297 3.323-1.297s2.448.49 3.323 1.297c.928.875 1.418 2.026 1.418 3.323s-.49 2.448-1.418 3.323c-.875.807-2.026 1.297-3.323 1.297zm7.718-1.297c-.875.807-2.026 1.297-3.323 1.297s-2.448-.49-3.323-1.297c-.928-.875-1.418-2.026-1.418-3.323s.49-2.448 1.418-3.323c.875-.807 2.026-1.297 3.323-1.297s2.448.49 3.323 1.297c.928.875 1.418 2.026 1.418 3.323s-.49 2.448-1.418 3.323z"/>
+                        </svg>
+                    </a>
+                </div>
+                <p>
+                    <a href="/privacy.html" style="color: #ffffff; text-decoration: none; margin: 0 8px;">Privacy Policy</a> | 
+                    <a href="/terms.html" style="color: #ffffff; text-decoration: none; margin: 0 8px;">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript functionality
+        
+        function toggleMenu() {
+            const menu = document.getElementById("navMenu");
+            menu.classList.toggle("active");
+        }
+
+        document.addEventListener("click", function(event) {
+            const menu = document.getElementById("navMenu");
+            const toggle = document.querySelector(".menu-toggle");
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove("active");
+            }
+        });
+
+        document.addEventListener('touchstart', function(){}, {passive: true});
+        document.addEventListener('touchmove', function(){}, {passive: true});
+
+        // Initialize EmailJS
+        emailjs.init("uSymBSJ-6upEPO3oh");
+        
+        // Cloudinary image upload solution
+        // This will upload images to Cloudinary and send you clickable links
+        
+        // Image upload functionality
+        function previewImage(input, imageNumber) {
+            const file = input.files[0];
+            if (file) {
+                // Validate the image
+                if (!validateImage(file)) {
+                    input.value = '';
+                    return;
+                }
+                
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const uploadItem = document.getElementById(`upload${imageNumber}`);
+                    const placeholder = uploadItem.querySelector('.upload-placeholder');
+                    const preview = uploadItem.querySelector('.preview-image');
+                    const removeBtn = uploadItem.querySelector('.remove-image');
+                    
+                    preview.src = e.target.result;
+                    preview.style.display = 'block';
+                    placeholder.style.display = 'none';
+                    removeBtn.style.display = 'block';
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+        
+        function removeImage(imageNumber) {
+            const uploadItem = document.getElementById(`upload${imageNumber}`);
+            const placeholder = uploadItem.querySelector('.upload-placeholder');
+            const preview = uploadItem.querySelector('.preview-image');
+            const removeBtn = uploadItem.querySelector('.remove-image');
+            const fileInput = uploadItem.querySelector('input[type="file"]');
+            
+            preview.style.display = 'none';
+            placeholder.style.display = 'block';
+            removeBtn.style.display = 'none';
+            fileInput.value = '';
+        }
+        
+        function validateImage(file) {
+            // Check file size (max 10MB for Cloudinary)
+            const maxSize = 10 * 1024 * 1024; // 10MB
+            if (file.size > maxSize) {
+                alert(`Image ${file.name} is too large. Please select an image smaller than 10MB.`);
+                return false;
+            }
+            
+            // Check file type
+            const allowedTypes = ['image/jpeg', 'image/jpg', 'image/png', 'image/gif'];
+            if (!allowedTypes.includes(file.type)) {
+                alert(`Image ${file.name} is not a supported format. Please use JPG, PNG, or GIF.`);
+                return false;
+            }
+            
+            return true;
+        }
+        
+        // Function to upload image to Cloudinary
+        const uploadImageToCloudinary = async (file) => {
+            const formData = new FormData();
+            formData.append('file', file);
+            formData.append('upload_preset', 'HomeLens'); // Use your new upload preset
+            
+            try {
+                const response = await fetch(`https://api.cloudinary.com/v1_1/dpawrjux6/image/upload`, {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const data = await response.json();
+                if (data.secure_url) {
+                    return {
+                        url: data.secure_url,           // Direct image link
+                        displayUrl: data.secure_url,    // Same URL for display
+                        publicId: data.public_id,       // Cloudinary public ID
+                        size: data.bytes,
+                        format: data.format,
+                        width: data.width,
+                        height: data.height
+                    };
+                } else {
+                    throw new Error('Image upload failed');
+                }
+            } catch (error) {
+                console.error('Cloudinary upload error:', error);
+                return null;
+            }
+        };
+        
+                // Form submission
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('imageUploadForm');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const name = document.getElementById('from_name').value;
+                    const email = document.getElementById('from_email').value;
+                    const phone = document.getElementById('phone').value;
+                    const description = document.getElementById('description').value;
+                    const image1 = document.getElementById('image1').files[0];
+                    const image2 = document.getElementById('image2').files[0];
+                    const image3 = document.getElementById('image3').files[0];
+                    const submitBtn = document.getElementById('submitBtn');
+                    
+                    // Validate required fields
+                    if (!name || !email) {
+                        alert('Please fill in your name and email address.');
+                        return;
+                    }
+                    
+                    // Validate that at least one image is uploaded
+                    if (!image1) {
+                        alert('Please upload at least one image for review.');
+                        return;
+                    }
+                    
+                    // Validate email format
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(email)) {
+                        showMessage('error');
+                        return;
+                    }
+                    
+                    // Show loading state
+                    submitBtn.disabled = true;
+                    submitBtn.querySelector('.btn-text').textContent = 'Uploading Images...';
+                    
+                    // Cloudinary approach: Upload images and send clickable links
+                    // This avoids EmailJS size limits and gives you viewable images
+                    
+                    // Upload all images to Cloudinary
+                    const imagePromises = [];
+                    if (image1) imagePromises.push(uploadImageToCloudinary(image1));
+                    if (image2) imagePromises.push(uploadImageToCloudinary(image2));
+                    if (image3) imagePromises.push(uploadImageToCloudinary(image3));
+                    
+                    // Wait for all images to upload, then send email
+                    Promise.all(imagePromises).then((uploadedImages) => {
+                        
+                        // Create HTML email content with image links
+                        let emailContent = `
+                            <h3>Image Review Request from ${name}</h3>
+                            <p><strong>Email:</strong> ${email}</p>
+                            <p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
+                            <p><strong>Property Description:</strong></p>
+                            <p>${description || 'No description provided'}</p>
+                            <hr>
+                            <h4>Images for Review:</h4>
+                        `;
+                        
+                        // Add each uploaded image to the email content
+                        uploadedImages.forEach((imageData, index) => {
+                            const imageNumber = index + 1;
+                            const originalImage = [image1, image2, image3][index];
+                            const fileSize = (originalImage.size / 1024 / 1024).toFixed(2);
+                            
+                            if (imageData) {
+                                // Image uploaded successfully - show thumbnail and links
+                                emailContent += `
+                                    <div style="margin: 20px 0; padding: 15px; border: 1px solid #ddd; border-radius: 8px;">
+                                        <h5>Image ${imageNumber}: ${originalImage.name}</h5>
+                                        <p><strong>Original File Size:</strong> ${fileSize} MB</p>
+                                        <p><strong>File Type:</strong> ${originalImage.type}</p>
+                                        <p><strong>Upload Time:</strong> ${new Date().toLocaleString()}</p>
+                                        <p><strong>Cloudinary ID:</strong> ${imageData.publicId}</p>
+                                        
+                                        <!-- Thumbnail preview -->
+                                        <img src="${imageData.displayUrl}" style="max-width: 200px; height: auto; border-radius: 4px; margin: 10px 0; border: 2px solid #ddd;" alt="Property Image ${imageNumber} Thumbnail">
+                                        
+                                        <!-- Full image link -->
+                                        <div style="margin-top: 15px; padding: 10px; background: #e3f2fd; border-radius: 6px; border-left: 4px solid #2196f3;">
+                                            <p style="margin: 0; font-size: 14px; color: #1976d2;">
+                                                <strong>🖼️ View Full Image:</strong> 
+                                                <a href="${imageData.url}" target="_blank" style="color: #1976d2; text-decoration: underline; font-weight: bold;">Click here to view full-size image</a>
+                                            </p>
+                                        </div>
+                                        
+                                        <!-- Alternative link -->
+                                        <div style="margin-top: 10px; padding: 10px; background: #f3e5f5; border-radius: 6px; border-left: 4px solid #9c27b0;">
+                                            <p style="margin: 0; font-size: 14px; color: #7b1fa2;">
+                                                <strong>🔗 Direct Link:</strong> 
+                                                <a href="${imageData.url}" target="_blank" style="color: #7b1fa2; text-decoration: underline;">${imageData.url}</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                `;
+                            } else {
+                                // Image upload failed - show error message
+                                emailContent += `
+                                    <div style="margin: 20px 0; padding: 15px; border: 1px solid #ffcdd2; border-radius: 8px; background: #ffebee;">
+                                        <h5>Image ${imageNumber}: ${originalImage.name}</h5>
+                                        <p><strong>Status:</strong> <span style="color: #c62828;">Upload failed</span></p>
+                                        <p style="color: #666; font-style: italic;">Please contact the customer to request this image be sent directly via email.</p>
+                                    </div>
+                                `;
+                            }
+                        });
+                        
+                        // Create the data object that will be sent to EmailJS
+                        const emailData = {
+                            from_name: name,
+                            from_email: email,
+                            phone: phone || '',
+                            description: description || '',
+                            message: emailContent
+                        };
+                        
+                        // Send email using EmailJS free tier
+                        emailjs.send('service_x7egcsk', 'template_s4181tf', emailData)
+                        .then(function(response) {
+                            showMessage('success');
+                            // Reset form
+                            document.getElementById('imageUploadForm').reset();
+                            // Reset image previews
+                            for (let i = 1; i <= 3; i++) {
+                                removeImage(i);
+                            }
+                        })
+                        .catch(function(error) {
+                            showMessage('error');
+                        })
+                        .finally(function() {
+                            // Reset loading state
+                            submitBtn.disabled = false;
+                            submitBtn.querySelector('.btn-text').textContent = 'Submit for Review';
+                        });
+                    }).catch(function(error) {
+                        showMessage('error');
+                        submitBtn.disabled = false;
+                        submitBtn.querySelector('.btn-text').textContent = 'Submit for Review';
+                    });
+                });
+            } else {
+                // Form not found
+            }
+        });
+        
+        // Message display functions
+        function showMessage(type) {
+            if (type === 'success') {
+                document.getElementById('successMessage').style.display = 'flex';
+            } else {
+                document.getElementById('errorMessage').style.display = 'flex';
+            }
+        }
+        
+        function hideMessage() {
+            document.getElementById('successMessage').style.display = 'none';
+            document.getElementById('errorMessage').style.display = 'none';
+        }
+    </script>
+
+    <!-- Crisp Chat Widget -->
+    <script type="text/javascript">
+        window.$crisp=[];
+                        window.CRISP_WEBSITE_ID="65ab5a63-82fe-495f-8e98-eb5874b01c97";
+        (function(){
+            const d=document;
+            const s=d.createElement("script");
+            s.src="https://client.crisp.chat/l.js";
+            s.async=1;
+            d.getElementsByTagName("head")[0].appendChild(s);
+        })();
+    </script>
+
+    <!-- Crisp Chat Customization -->
+    <style>
+        /* Customize Crisp Chat widget appearance */
+        #crisp-chatbox {
+            /* Ensure chat doesn't fill entire screen */
+            max-width: 400px !important;
+            max-height: 600px !important;
+            right: 20px !important;
+            bottom: 20px !important;
+        }
+
+        /* Customize the chat button */
+        #crisp-chatbox a[data-full-view] {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%) !important;
+            border: 2px solid #475569 !important;
+            border-radius: 50px !important;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+            transition: all 0.3s ease !important;
+        }
+
+        #crisp-chatbox a[data-full-view]:hover {
+            background: linear-gradient(135deg, #334155 0%, #475569 100%) !important;
+            transform: scale(1.05) !important;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3) !important;
+        }
+
+        /* Customize chat window colors */
+        .crisp-client .cc-kv6t .cc-1xry .cc-1xry {
+            background: #1e293b !important;
+            color: #ffffff !important;
+        }
+
+        .crisp-client .cc-kv6t .cc-1xry .cc-1xry .cc-1xry {
+            background: #334155 !important;
+        }
+
+        /* Header styling */
+        .crisp-client .cc-kv6t .cc-1xry .cc-1xry .cc-1xry .cc-1xry {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%) !important;
+            color: #ffffff !important;
+        }
+
+        /* Message bubbles */
+        .crisp-client .cc-kv6t .cc-1xry .cc-1xry .cc-1xry .cc-1xry .cc-1xry {
+            background: #475569 !important;
+            color: #ffffff !important;
+        }
+
+        /* Input field */
+        .crisp-client .cc-kv6t .cc-1xry .cc-1xry .cc-1xry .cc-1xry .cc-1xry input {
+            background: #334155 !important;
+            color: #ffffff !important;
+            border: 1px solid #475569 !important;
+        }
+
+        /* Send button */
+        .crisp-client .cc-kv6t .cc-1xry .cc-1xry .cc-1xry .cc-1xry .cc-1xry button {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%) !important;
+            color: #ffffff !important;
+            border: 1px solid #475569 !important;
+        }
+    </style>
+
+    <script>
+        // Wait for Crisp to load, then apply customizations
+        window.addEventListener('load', function() {
+            // Apply customizations after a short delay to ensure Crisp is loaded
+            setTimeout(function() {
+                // Customize chat button text and appearance
+                if (window.$crisp) {
+                    // Set custom welcome message
+                    $crisp.push(["safe", true]);
+                    
+                    // Customize the chat appearance
+                    $crisp.push(["config", "position:reverse", [true]]);
+                    $crisp.push(["config", "locale:en", ["en"]]);
+                    
+                    // Set custom colors and branding
+                    $crisp.push(["config", "color:theme", ["#1e293b"]]);
+                }
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

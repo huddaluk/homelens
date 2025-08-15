@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HomeLens Service Quiz - Find the perfect property inspection service for your needs. Take our quick quiz to get personalized recommendations from ACABE-accredited inspectors.">
+    <meta name="keywords" content="property inspection quiz, service finder, property survey quiz, inspection service recommendation, HomeLens quiz, property assessment quiz">
+    <meta name="author" content="HomeLens Limited">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://homelensuk.co.uk/service-quiz.html">
+    <meta property="og:title" content="Service Quiz - HomeLens UK">
+    <meta property="og:description" content="HomeLens Service Quiz - Find the perfect property inspection service for your needs. Take our quick quiz to get personalized recommendations.">
+    <meta property="og:image" content="https://homelensuk.co.uk/src/assets/homelenslogo.png">
+    <meta property="og:site_name" content="HomeLens UK">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://homelensuk.co.uk/service-quiz.html">
+    <meta property="twitter:title" content="Service Quiz - HomeLens UK">
+    <meta property="twitter:description" content="HomeLens Service Quiz - Find the perfect property inspection service for your needs. Take our quick quiz to get personalized recommendations.">
+    <meta property="twitter:image" content="https://homelensuk.co.uk/src/assets/homelenslogo.png">
+    
+    <title>Service Quiz - HomeLens UK</title>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX', {
+            page_title: 'HomeLens Service Quiz',
+            page_location: window.location.href,
+            send_page_view: true
+        });
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+                'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+                sans-serif;
+            line-height: 1.6;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #dbeafe 0%, #ffffff 100%);
+            color: #111827;
+        }
+        
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+        
+        @media (min-width: 640px) {
+            .container {
+                padding: 0 24px;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .container {
+                padding: 0 32px;
+            }
+        }
+        
+        /* Header */
+        .header {
+            background: #2b2f31;
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            position: relative;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            min-width: 0;
+            flex-shrink: 0;
+        }
+
+        .logo img {
+            height: 64px;
+            width: 64px;
+            object-fit: contain;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .logo:hover img {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+
+        @media (min-width: 640px) {
+            .logo img {
+                height: 80px;
+                width: 80px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .logo img {
+                height: 112px;
+                width: 112px;
+            }
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-menu a:hover {
+            color: #fbbf24;
+        }
+
+                  .mobile-menu-btn {
+              display: none;
+              background: none;
+              border: none;
+              color: white;
+              font-size: 1.5rem;
+              cursor: pointer;
+              position: absolute;
+              right: 16px;
+          }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 1.25rem;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+
+                          .nav-menu {
+                  display: none;
+                  position: absolute;
+                  top: 100%;
+                  left: 0;
+                  right: 0;
+                  width: 100vw;
+                  margin-left: calc(-50vw + 50%);
+                  background: #2b2f31;
+                  flex-direction: column;
+                  padding: 1rem;
+                  gap: 1rem;
+                  transform: translateY(-10px);
+                  opacity: 0;
+                  transition: transform 0.3s ease, opacity 0.3s ease;
+                  will-change: transform, opacity;
+                  box-sizing: border-box;
+              }
+
+              .nav-menu.active {
+                  display: flex;
+                  transform: translateY(0);
+                  opacity: 1;
+              }
+        }
+        
+        .page-header {
+            background: linear-gradient(180deg, #232628 0%, #2b2f31 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            margin: 140px auto 20px auto;
+            max-width: 1280px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        /* Desktop-only spacing for hero sections */
+        @media (min-width: 768px) {
+            .page-header {
+                margin-top: 180px;
+            }
+        }
+        
+                .page-header h1 {
+            font-size: 1.75rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .page-header p {
+            font-size: 1rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (min-width: 768px) {
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+        }
+        
+        .quiz-section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 32px 16px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .quiz-section h2 {
+            text-align: center;
+            font-size: 1.75rem;
+            margin-bottom: 30px;
+            color: #232628;
+        }
+        
+        .quiz-progress {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #666;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e5e7eb;
+            border-radius: 4px;
+            margin: 10px 0;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: #fbbf24;
+            transition: width 0.3s ease;
+        }
+        
+        .question {
+            margin-bottom: 30px;
+        }
+        
+        .question h3 {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: #232628;
+        }
+        
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .option {
+            padding: 15px 20px;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: white;
+        }
+        
+        .option:hover {
+            border-color: #fbbf24;
+            background: #fef3c7;
+        }
+        
+        .option.selected {
+            border-color: #fbbf24;
+            background: #fef3c7;
+        }
+        
+        .option input[type="radio"] {
+            margin-right: 10px;
+        }
+        
+        .quiz-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            font-weight: bold;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            text-align: center;
+            font-size: 1.1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+        
+        .btn:disabled {
+            background: #9ca3af;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .btn-secondary {
+            background: #6b7280;
+        }
+        
+        .btn-secondary:hover {
+            background: #4b5563;
+        }
+        
+        .result-section {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .result-section h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #232628;
+        }
+        
+        .result-description {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .recommended-service {
+            background: linear-gradient(135deg, #232628 0%, #2b2f31 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+        
+        .recommended-service h4 {
+            color: #fbbf24;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .service-price {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #fbbf24;
+            margin: 15px 0;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+            margin-top: 30px;
+        }
+        
+        @media (min-width: 640px) {
+            .cta-buttons {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+        
+        .footer {
+            background: #1a1d1e;
+            color: white;
+            padding: 40px 20px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 768px) {
+            .footer-content {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 40px;
+            }
+        }
+
+        .footer-section h3 {
+            color: #ffffff;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .footer-section p {
+            margin-bottom: 8px;
+            opacity: 0.9;
+            font-size: 0.9rem;
+        }
+
+        .footer-section a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.2s;
+            display: block;
+            margin-bottom: 6px;
+            font-size: 0.9rem;
+        }
+
+        .footer-section a:hover {
+            color: #fbbf24;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            margin-top: 30px;
+            padding-top: 20px;
+        }
+
+        .footer-bottom p {
+            margin-bottom: 6px;
+            opacity: 0.7;
+            font-size: 0.85rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin: 15px 0;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            background: #374151;
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: all 0.2s;
+            font-size: 1rem;
+        }
+
+        .social-link:hover {
+            background: #fbbf24;
+            color: #1a1d1e;
+        }
+        
+        .btn,
+        .menu-toggle {
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="/" class="logo">
+                <img src="src/assets/homelenslogo.png" alt="HomeLens Logo - Professional Property Inspection Services" loading="lazy" width="64" height="64">
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/online-services.html">Online Services</a></li>
+                <li><a href="/home-visit-services.html">Home Visits</a></li>
+                                  <li><a href="/about.html">About Us</a></li>
+                  
+                  <li><a href="/contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Service Quiz</h1>
+            <p>Not sure which inspection service you need? Take our quick 30-second quiz to get a personalized recommendation!</p>
+        </div>
+    </section>
+
+    <section class="quiz-section">
+        <div class="container">
+            <h2>Find Your Perfect Service</h2>
+            
+            <div id="quiz-container">
+                <div class="quiz-progress">
+                    <p>Question <span id="current-question">1</span> of <span id="total-questions">5</span></p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill" style="width: 20%"></div>
+                    </div>
+                </div>
+                
+                <div id="question-container">
+                    <div class="question">
+                        <h3>What type of property are you looking to inspect?</h3>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q1" value="new-build">
+                                New build or recently constructed property
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1" value="existing-home">
+                                Existing home (more than 5 years old)
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1" value="buying-selling">
+                                Buying or selling a property
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1" value="maintenance">
+                                General maintenance and upkeep
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="quiz-buttons">
+                    <button class="btn btn-secondary" id="prev-btn" disabled>Previous</button>
+                    <button class="btn btn-primary" id="next-btn">Next</button>
+                </div>
+            </div>
+            
+            <div id="result-container" style="display: none;">
+                <div class="result-section">
+                    <h3>Your Personalized Recommendation</h3>
+                    <div id="result-content"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 HomeLens Limited. All rights reserved.</p>
+            <p>Professional property inspection and advisory services</p>
+            <p>Contact: enquiries@homelensuk.co.uk</p>
+            <p style="margin-top: 20px;">
+                <a href="/privacy.html">Privacy Policy</a>
+                <a href="/terms.html">Terms of Service</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const questions = [
+            {
+                question: "What type of property are you looking to inspect?",
+                options: [
+                    { value: "new-build", text: "New build or recently constructed property" },
+                    { value: "existing-home", text: "Existing home (more than 5 years old)" },
+                    { value: "buying-selling", text: "Buying or selling a property" },
+                    { value: "maintenance", text: "General maintenance and upkeep" }
+                ]
+            },
+            {
+                question: "What's your main concern?",
+                options: [
+                    { value: "structural", text: "Structural issues and safety" },
+                    { value: "maintenance", text: "Maintenance and repairs needed" },
+                    { value: "value", text: "Property value and investment" },
+                    { value: "quick-advice", text: "Quick advice and guidance" }
+                ]
+            },
+            {
+                question: "How urgent is your inspection?",
+                options: [
+                    { value: "urgent", text: "Very urgent - need results within 24 hours" },
+                    { value: "soon", text: "Soon - within the next week" },
+                    { value: "planning", text: "Planning ahead - no immediate rush" },
+                    { value: "flexible", text: "Flexible timing" }
+                ]
+            },
+            {
+                question: "What's your budget range?",
+                options: [
+                    { value: "budget", text: "Budget-friendly options (£50-£100)" },
+                    { value: "standard", text: "Standard professional service (£100-£200)" },
+                    { value: "premium", text: "Premium comprehensive service (£200+)" },
+                    { value: "flexible", text: "Flexible - depends on the service" }
+                ]
+            },
+            {
+                question: "Do you prefer in-person or remote service?",
+                options: [
+                    { value: "remote", text: "Remote/online service preferred" },
+                    { value: "in-person", text: "In-person inspection preferred" },
+                    { value: "either", text: "Either option works for me" },
+                    { value: "not-sure", text: "Not sure - need advice" }
+                ]
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+        let answers = {};
+
+        function toggleMenu() {
+            const menu = document.getElementById("navMenu");
+            menu.classList.toggle("active");
+        }
+
+        document.addEventListener("click", function(event) {
+            const menu = document.getElementById("navMenu");
+            const toggle = document.querySelector(".mobile-menu-btn");
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove("active");
+            }
+        });
+
+        function updateProgress() {
+            const progress = ((currentQuestionIndex + 1) / questions.length) * 100;
+            document.getElementById('progress-fill').style.width = progress + '%';
+            document.getElementById('current-question').textContent = currentQuestionIndex + 1;
+        }
+
+        function showQuestion(index) {
+            const question = questions[index];
+            const container = document.getElementById('question-container');
+            
+            container.innerHTML = `
+                <div class="question">
+                    <h3>${question.question}</h3>
+                    <div class="options">
+                        ${question.options.map(option => `
+                            <label class="option">
+                                <input type="radio" name="q${index + 1}" value="${option.value}">
+                                ${option.text}
+                            </label>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+
+            // Restore previous answer if exists
+            if (answers[`q${index + 1}`]) {
+                const radio = container.querySelector(`input[value="${answers[`q${index + 1}`]}"]`);
+                if (radio) radio.checked = true;
+            }
+
+            updateProgress();
+            updateButtons();
+        }
+
+        function updateButtons() {
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            
+            prevBtn.disabled = currentQuestionIndex === 0;
+            
+            if (currentQuestionIndex === questions.length - 1) {
+                nextBtn.textContent = 'Get Results';
+            } else {
+                nextBtn.textContent = 'Next';
+            }
+        }
+
+        function saveAnswer() {
+            const questionContainer = document.getElementById('question-container');
+            const selectedRadio = questionContainer.querySelector('input[type="radio"]:checked');
+            
+            if (selectedRadio) {
+                answers[`q${currentQuestionIndex + 1}`] = selectedRadio.value;
+                return true;
+            }
+            return false;
+        }
+
+        function getRecommendation() {
+            // Simple recommendation logic based on answers
+            const q1 = answers.q1;
+            const q2 = answers.q2;
+            const q3 = answers.q3;
+            const q4 = answers.q4;
+            const q5 = answers.q5;
+
+            if (q5 === 'remote' || q3 === 'urgent') {
+                return {
+                    service: 'Virtual Review',
+                    price: '£45',
+                    description: 'Perfect for quick advice and urgent concerns. Get expert property advice within 24-48 hours without leaving your home.',
+                    features: ['24-48 hour turnaround', 'Expert property advice', 'No home visit needed', 'Perfect for quick questions'],
+                    bookingUrl: '/online-services.html',
+                    bookingText: 'View Online Services'
+                };
+            } else if (q1 === 'new-build' || q2 === 'structural') {
+                return {
+                    service: 'HomeCheck PRO',
+                    price: 'From £125',
+                    description: 'Comprehensive inspection with detailed report and recommendations. Ideal for new builds and structural concerns.',
+                    features: ['Comprehensive inspection', 'Detailed report', 'Tailored recommendations', 'Priority actions'],
+                    bookingUrl: '/book-homecheck-pro.html',
+                    bookingText: 'Book HomeCheck PRO'
+                };
+            } else {
+                return {
+                    service: 'HomeCheck',
+                    price: 'From £95',
+                    description: 'Professional visual inspection with detailed report. Perfect for general maintenance and property assessment.',
+                    features: ['Professional inspection', 'Detailed report', 'Photographic evidence', 'Action items'],
+                    bookingUrl: '/book-homecheck.html',
+                    bookingText: 'Book HomeCheck'
+                };
+            }
+        }
+
+        function showResults() {
+            const recommendation = getRecommendation();
+            const resultContent = document.getElementById('result-content');
+            
+            resultContent.innerHTML = `
+                <div class="recommended-service">
+                    <h4>${recommendation.service}</h4>
+                    <div class="service-price">${recommendation.price}</div>
+                    <p>${recommendation.description}</p>
+                    <ul style="text-align: left; margin: 20px 0; padding-left: 20px;">
+                        ${recommendation.features.map(feature => `<li>${feature}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                <div class="cta-buttons">
+                    <a href="${recommendation.bookingUrl}" class="btn btn-primary">${recommendation.bookingText}</a>
+                    <a href="/" class="btn btn-secondary">Back to Home</a>
+                </div>
+            `;
+            
+            document.getElementById('quiz-container').style.display = 'none';
+            document.getElementById('result-container').style.display = 'block';
+        }
+
+        document.getElementById('next-btn').addEventListener('click', function() {
+            if (!saveAnswer()) {
+                alert('Please select an option before continuing.');
+                return;
+            }
+            
+            if (currentQuestionIndex === questions.length - 1) {
+                showResults();
+            } else {
+                currentQuestionIndex++;
+                showQuestion(currentQuestionIndex);
+            }
+        });
+
+        document.getElementById('prev-btn').addEventListener('click', function() {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                showQuestion(currentQuestionIndex);
+            }
+        });
+
+        // Initialize first question
+        showQuestion(0);
+
+        document.addEventListener('touchstart', function(){}, {passive: true});
+        document.addEventListener('touchmove', function(){}, {passive: true});
+
+        console.log("🎯 HomeLens Service Quiz page loaded successfully!");
+    </script>
+
+    <!-- Crisp Chat Widget -->
+    <script type="text/javascript">
+        window.$crisp=[];
+                        window.CRISP_WEBSITE_ID="65ab5a63-82fe-495f-8e98-eb5874b01c97";
+        (function(){
+            const d=document;
+            const s=d.createElement("script");
+            s.src="https://client.crisp.chat/l.js";
+            s.async=1;
+            d.getElementsByTagName("head")[0].appendChild(s);
+        })();
+    </script>
+
+    <!-- Crisp Chat Customization -->
+    <style>
+        /* Customize Crisp Chat widget appearance */
+        #crisp-chatbox {
+            /* Ensure chat doesn't fill entire screen */
+            max-width: 400px !important;
+            max-height: 600px !important;
+            right: 20px !important;
+            bottom: 20px !important;
+        }
+
+        /* Customize the chat button */
+        #crisp-chatbox a[data-full-view] {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%) !important;
+            border: 2px solid #475569 !important;
+            border-radius: 50px !important;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+            transition: all 0.3s ease !important;
+        }
+
+        #crisp-chatbox a[data-full-view]:hover {
+            background: linear-gradient(135deg, #334155 0%, #475569 100%) !important;
+            transform: scale(1.05) !important;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3) !important;
+        }
+
+        /* Customize chat window colors */
+        .crisp-client .cc-kv6t .cc-1xry .cc-1xry {
+            background: #1e293b !important;
+            color: #ffffff !important;
+        }
+
+        .crisp-client .cc-kv6t .cc-1xry .cc-1xry .cc-1xry {
+            background: #334155 !important;
+        }
+
+        /* Header styling */
+        .crisp-client .cc-kv6t .cc-1xry .cc-1xry .cc-1xry .cc-1xry {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%) !important;
+            color: #ffffff !important;
+        }
+
+        /* Message bubbles */
+        .crisp-client .cc-kv6t .cc-1xry .cc-1xry .cc-1xry .cc-1xry .cc-1xry {
+            background: #475569 !important;
+            color: #ffffff !important;
+        }
+
+        /* Input field */
+        .crisp-client .cc-kv6t .cc-1xry .cc-1xry .cc-1xry .cc-1xry .cc-1xry input {
+            background: #334155 !important;
+            color: #ffffff !important;
+            border: 1px solid #475569 !important;
+        }
+
+        /* Send button */
+        .crisp-client .cc-kv6t .cc-1xry .cc-1xry .cc-1xry .cc-1xry .cc-1xry button {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%) !important;
+            color: #ffffff !important;
+            border: 1px solid #475569 !important;
+        }
+    </style>
+
+    <script>
+        // Wait for Crisp to load, then apply customizations
+        window.addEventListener('load', function() {
+            // Apply customizations after a short delay to ensure Crisp is loaded
+            setTimeout(function() {
+                // Customize chat button text and appearance
+                if (window.$crisp) {
+                    // Set custom welcome message
+                    $crisp.push(["safe", true]);
+                    
+                    // Customize the chat appearance
+                    $crisp.push(["config", "position:reverse", [true]]);
+                    $crisp.push(["config", "locale:en", ["en"]]);
+                    
+                    // Set custom colors and branding
+                    $crisp.push(["config", "color:theme", ["#1e293b"]]);
+                }
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
